@@ -1,15 +1,14 @@
 version: '3.8'
 
 services:
-  api:
+  musicboxd-api:
     build: .
     ports:
       - "8080:8080"
     environment:
       # A porta dinâmica que os serviços de nuvem exigem
-      - PORT=8080
-
-      # Sobrescrevendo as configurações do banco usando as variáveis de ambiente
-      - SPRING_DATASOURCE_URL=jdbc:postgresql://aws-1-us-east-2.pooler.supabase.com:5432/postgres
-      - SPRING_DATASOURCE_USERNAME=postgres.qnsgvscepyluxdgpgczu
-      - SPRING_DATASOURCE_PASSWORD=lagoadocarro
+        DB_HOST: aws-1-us-east-1.pooler.supabase.com
+        DB_PORT: 5432
+        DB_NAME: postgres
+        DB_USER: postgres.pnssbkdehhtrgqqyyqrc
+        DB_PASSWORD: lagoadocarro
