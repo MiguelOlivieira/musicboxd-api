@@ -8,7 +8,7 @@ services:
     environment:
       # A porta dinâmica que os serviços de nuvem exigem
         DB_HOST: aws-1-us-east-1.pooler.supabase.com
-        DB_PORT: 5432
+        DB_PORT: 6543
         DB_NAME: postgres
         DB_USER: postgres.pnssbkdehhtrgqqyyqrc
         DB_PASSWORD: lagoadocarro

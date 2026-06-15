@@ -10,7 +10,7 @@ COPY pom.xml .
 COPY src ./src
 
 # Compila o projeto gerando o .jar (pulando os testes para agilizar)
-RUN mvn clean package -DskipTests
+RUN mvn clean package -DskipTests -Dfile.encoding=UTF-8
 
 # ==========================================
 # ESTÁGIO 2: O Executor (Run)
